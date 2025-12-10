@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use './tokens' as *;
+
+@mixin text-preset($preset) {
+  font-size: map.get($preset, font-size);
+  line-height: map.get($preset, line-height);
+  letter-spacing: map.get($preset, letter-spacing);
+  font-weight: map.get($preset, font-weight);
+}
+
+@each $name, $value in $radius {
+  .radius-#{$name} {
+    border-radius: $value;
+  }
+}

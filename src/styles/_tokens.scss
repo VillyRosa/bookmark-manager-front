@@ -1,0 +1,53 @@
+/* COLORS */
+:root {
+  --neutral-900: #051513;
+  --neutral-800: #4C5C59;
+  --neutral-500: #899492;
+  --neutral-400: rgb(192, 207, 204);
+  --neutral-300: #DDE9E7;
+  --neutral-100: #E8F0EF;
+  --neutral-0: #FFFFFF;
+
+  --teal-800: #013C3B;
+  --teal-700: #014745;
+
+  --red-800: #CB0A04;
+  --red-600: #FD4740;
+}
+
+/* SPACING */
+$spacing: (
+  0: 0,
+  025: 2px,
+  050: 4px,
+  075: 6px,
+  100: 8px,
+  125: 10px,
+  150: 12px,
+  200: 16px,
+  250: 20px,
+  300: 24px,
+  400: 32px,
+  500: 40px,
+  600: 48px,
+  800: 64px,
+  1000: 80px,
+  1200: 96px,
+  1400: 112px,
+  1600: 128px,
+  1800: 140px
+);
+
+/* RADIUS */
+$radius: (
+  0: 0,
+  4: 4px,
+  6: 6px,
+  8: 8px,
+  10: 10px,
+  12: 12px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  full: 999px
+);

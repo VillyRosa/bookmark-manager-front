@@ -1,0 +1,89 @@
+@use './mixins' as mix;
+
+$text-preset-1: (
+  font-size: 24px,
+  line-height: 140%,
+  letter-spacing: 0,
+  font-weight: 700
+);
+
+$text-preset-2: (
+  font-size: 20px,
+  line-height: 120%,
+  letter-spacing: 0,
+  font-weight: 700
+);
+
+$text-preset-2-semibold: (
+  font-size: 20px,
+  line-height: 120%,
+  letter-spacing: 0,
+  font-weight: 600
+);
+
+$text-preset-3: (
+  font-size: 16px,
+  line-height: 140%,
+  letter-spacing: 0,
+  font-weight: 600
+);
+
+$text-preset-3-medium: (
+  font-size: 16px,
+  line-height: 130%,
+  letter-spacing: 0,
+  font-weight: 500
+);
+
+$text-preset-4: (
+  font-size: 14px,
+  line-height: 140%,
+  letter-spacing: 0,
+  font-weight: 600
+);
+
+$text-preset-4-medium: (
+  font-size: 14px,
+  line-height: 150%,
+  letter-spacing: 0,
+  font-weight: 500
+);
+
+$text-preset-5: (
+  font-size: 12px,
+  line-height: 140%,
+  letter-spacing: 0,
+  font-weight: 500
+);
+
+.text-preset-1 {
+  @include mix.text-preset($text-preset-1);
+}
+
+.text-preset-2 {
+  @include mix.text-preset($text-preset-2);
+}
+
+.text-preset-2-semibold {
+  @include mix.text-preset($text-preset-2-semibold);
+}
+
+.text-preset-3 {
+  @include mix.text-preset($text-preset-3);
+}
+
+.text-preset-3-medium {
+  @include mix.text-preset($text-preset-3-medium);
+}
+
+.text-preset-4 {
+  @include mix.text-preset($text-preset-4);
+}
+
+.text-preset-4-medium {
+  @include mix.text-preset($text-preset-4-medium);
+}
+
+.text-preset-5 {
+  @include mix.text-preset($text-preset-5);
+}
