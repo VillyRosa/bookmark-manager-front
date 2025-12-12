@@ -1,0 +1,17 @@
+@use 'index' as *;
+@use 'sass:map';
+
+button {
+  width: 100%;
+  padding: map.get($spacing, 150) map.get($spacing, 200);
+  background-color: var(--teal-700);
+  border: none;
+  border-radius: map.get($radius, 8);
+  color: var(--neutral-0);
+  cursor: pointer;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background-color: var(--teal-800);
+  }
+}
