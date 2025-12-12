@@ -19,5 +19,6 @@ export class InputComponent {
   @Input() name: string = '';
   @Input() label: string = '';
   @Input() type: 'text' | 'email' | 'number' | 'password' = 'text';
+  @Input() required: boolean = false;
   @Input() placeholder: string = '';
 }

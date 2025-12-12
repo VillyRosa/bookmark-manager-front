@@ -1,1 +1,35 @@
-<p>register works!</p>
+<div class="container">
+  <main>
+    <img src="./images/logo-light-theme.svg" alt="logo">
+    <div class="form-header">
+      <h1 class="text-preset-1">Create your account</h1>
+      <p class="text-preset-4-medium">Join us and start saving your favorite links — organized, searchable, and always within reach.</p>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <app-input
+        name="fullname"
+        label="Full name"
+        type="text"
+        [required]="true"
+      />
+      <app-input
+        name="email"
+        label="Email address"
+        type="email"
+        [required]="true"
+      />
+      <app-input
+        name="password"
+        label="Password"
+        type="password"
+        [required]="true"
+      />
+      <app-button type="submit">Create account</app-button>
+    </form>
+    <div class="form-footer">
+      <p class="text-preset-4-medium">
+        Already have an account? <a class="text-preset-4" routerLink="/auth/login">Log in</a>
+      </p>
+    </div>
+  </main>
+</div>
