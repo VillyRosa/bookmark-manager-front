@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="container">
+  <main>
+    <img src="./images/logo-light-theme.svg" alt="logo">
+    <div class="form-header">
+      <h1 class="text-preset-1">Log in to your account</h1>
+      <p class="text-preset-4-medium">Welcome back! Please enter your details.</p>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <app-input
+        name="email"
+        label="Email"
+        type="email"
+      />
+      <app-input
+        name="password"
+        label="Password"
+        type="password"
+      />
+      <app-button type="submit">Log in</app-button>
+    </form>
+    <div class="form-footer">
+      <p class="text-preset-4-medium">
+        Forgot password? <a class="text-preset-4" routerLink="/auth/forgot-password">Reset it</a>
+      </p>
+      <p class="text-preset-4-medium">
+        Don’t have an account? <a class="text-preset-4" routerLink="/auth/register">Sign up</a>
+      </p>
+    </div>
+  </main>
+</div>
