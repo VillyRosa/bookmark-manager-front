@@ -14,7 +14,7 @@ import {Router, RouterLink} from '@angular/router';
     ReactiveFormsModule
   ],
   templateUrl: './register.html',
-  styleUrl: './register.scss',
+  styleUrl: '../auth-style.scss',
 })
 export class Register {
   private router = inject(Router);

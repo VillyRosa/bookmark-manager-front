@@ -14,7 +14,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
     ReactiveFormsModule
   ],
   templateUrl: './login.html',
-  styleUrl: './login.scss',
+  styleUrl: '../auth-style.scss',
 })
 export class Login {
   private router = inject(Router);

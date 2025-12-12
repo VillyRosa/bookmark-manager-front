@@ -14,7 +14,7 @@ import {Router, RouterLink} from "@angular/router";
     ReactiveFormsModule
   ],
   templateUrl: './forgot-password.html',
-  styleUrl: './forgot-password.scss',
+  styleUrl: '../auth-style.scss',
 })
 export class ForgotPassword {
   private router = inject(Router);
