@@ -1,0 +1,30 @@
+@use 'index' as *;
+@use 'sass:map';
+
+.input-box {
+  width: 100%;
+  gap: map.get($spacing, 100);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  label {
+    width: 100%;
+    color: var(--neutral-900);
+  }
+
+  input {
+    width: 100%;
+    color: var(--neutral-900);
+    padding: map.get($spacing, 150);
+    border: 1px solid var(--neutral-500);
+    border-radius: map.get($radius, 8);
+    outline: none;
+    transition: background-color 200ms ease;
+
+    &:hover, &:focus {
+      background-color: var(--neutral-300);
+    }
+  }
+}
