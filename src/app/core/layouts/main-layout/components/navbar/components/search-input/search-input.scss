@@ -1,0 +1,28 @@
+@use 'index' as *;
+@use 'sass:map';
+
+.input-box {
+  width: 320px;
+  padding: map.get($spacing, 150);
+  border: 1px solid var(--neutral-300);
+  border-radius: map.get($radius, 8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: map.get($spacing, 100);
+
+  svg path {
+    stroke: var(--neutral-800);
+  }
+
+  input {
+    color: var(--neutral-900);
+    flex: 1;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: var(--neutral-800);
+    }
+  }
+}

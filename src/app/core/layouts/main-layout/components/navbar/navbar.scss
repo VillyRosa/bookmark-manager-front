@@ -1,0 +1,25 @@
+@use 'index' as *;
+@use 'sass:map';
+
+nav {
+  width: 100%;
+  padding: map.get($spacing, 200) map.get($spacing, 400);
+  border-bottom: 1px solid var(--neutral-300);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .button-group {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: map.get($spacing, 200);
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
