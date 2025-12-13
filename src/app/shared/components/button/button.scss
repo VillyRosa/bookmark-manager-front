@@ -22,4 +22,38 @@ button {
   &:hover {
     background-color: var(--teal-800);
   }
+
+  &.secondary {
+     background-color: var(--neutral-0);
+     border: 1px solid var(--neutral-400);
+
+     span {
+       color: var(--neutral-900);
+       stroke: var(--neutral-900);
+     }
+
+     &:hover {
+       background-color: var(--neutral-100);
+       border-color: var(--neutral-400);
+     }
+  }
+
+  &.error {
+    background-color: var(--red-800);
+
+    span {
+      color: var(--neutral-0);
+      stroke: var(--neutral-0);
+    }
+  }
+
+  &.sm {
+    padding: map.get($spacing, 125) map.get($spacing, 150);
+  }
+
+  &.only-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
 }

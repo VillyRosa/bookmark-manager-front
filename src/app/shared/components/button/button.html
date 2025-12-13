@@ -1,4 +1,4 @@
-<button type="{{ type }}">
+<button [ngClass]="[hierarchy, size]" [class.only-icon]="onlyIcon" type="{{ type }}">
   <span class="text-preset-3">
     <ng-content />
   </span>
