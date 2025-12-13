@@ -7,9 +7,17 @@ button {
   background-color: var(--teal-700);
   border: none;
   border-radius: map.get($radius, 8);
-  color: var(--neutral-0);
   cursor: pointer;
   transition: background-color 200ms ease;
+
+  span {
+    color: var(--neutral-0);
+    stroke: var(--neutral-0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: map.get($spacing, 050);
+  }
 
   &:hover {
     background-color: var(--teal-800);
