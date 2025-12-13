@@ -1,0 +1,29 @@
+@use 'index' as *;
+@use 'sass:map';
+
+section {
+  width: 100%;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      color: var(--neutral-900);
+    }
+  }
+
+  .bookmark-grid {
+    width: 100%;
+    margin-top: map.get($spacing, 250);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: map.get($spacing, 400);
+
+    li {
+      list-style: none;
+    }
+  }
+}

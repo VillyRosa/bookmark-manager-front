@@ -1,0 +1,10 @@
+@use '../../../../../../../../../styles/index' as *;
+@use 'sass:map';
+
+.info {
+  color: var(--neutral-800);
+  stroke: var(--neutral-800);
+  display: flex;
+  align-items: center;
+  gap: map.get($spacing, 075);
+}
