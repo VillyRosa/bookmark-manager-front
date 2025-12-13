@@ -1,0 +1,69 @@
+@use 'index' as *;
+@use 'sass:map';
+
+.tag-checkbox-container {
+  width: 100%;
+  color: var(--neutral-800);
+  padding: map.get($spacing, 150) map.get($spacing, 050);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: map.get($spacing, 150);
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid var(--neutral-500);
+    border-radius: map.get($radius, 4);
+    transition: all 200ms ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: var(--neutral-300);
+    }
+
+    &.active {
+      background-color: var(--teal-700);
+      border: none;
+
+      svg {
+        width: map.get($spacing, 150);
+        height: map.get($spacing, 150);
+        stroke: var(--neutral-0);
+      }
+
+      &:hover {
+        background-color: var(--teal-800);
+      }
+    }
+  }
+
+  label {
+    flex: 1;
+    outline: green;
+  }
+
+  .amount {
+    width: 21px;
+    height: 21px;
+    background-color: var(--neutral-100);
+    border: 1px solid var(--neutral-300);
+    border-radius: map.get($radius, full);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

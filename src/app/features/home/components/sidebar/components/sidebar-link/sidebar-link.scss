@@ -1,0 +1,22 @@
+@use 'index' as *;
+@use 'sass:map';
+
+a {
+  width: 100%;
+  color: var(--neutral-800);
+  text-decoration: none;
+  border-radius: map.get($radius, 6);
+  margin: map.get($spacing, 025) 0;
+  padding: map.get($spacing, 100) map.get($spacing, 150);
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: map.get($spacing, 150);
+  }
+
+  &.active {
+    color: var(--neutral-900);
+    background-color: var(--neutral-100);
+  }
+}

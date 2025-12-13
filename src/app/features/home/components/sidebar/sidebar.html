@@ -1,0 +1,18 @@
+<aside>
+  <div class="header">
+    <img src="./images/logo-light-theme.svg" alt="logo">
+  </div>
+  <section>
+    <div class="navigation">
+      <app-sidebar-link label="Home" icon="icon-home" routerLink="/home" />
+      <app-sidebar-link label="Archived" icon="icon-archive" routerLink="/archived" />
+    </div>
+    <div class="tags">
+      <h3 class="text-preset-4">TAGS</h3>
+      <app-tag-checkbox name="ai" label="Ai" [amount]="1" />
+      <app-tag-checkbox name="community" label="Community" [amount]="5" />
+      <app-tag-checkbox name="compatibility" label="Compatibility" [amount]="1" />
+      <app-tag-checkbox name="css" label="CSS" [amount]="6" />
+    </div>
+  </section>
+</aside>
