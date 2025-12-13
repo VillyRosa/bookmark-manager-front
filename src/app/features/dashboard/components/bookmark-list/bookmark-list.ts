@@ -14,6 +14,6 @@ import {Icon} from '@shared/components/icon/icon';
   styleUrl: './bookmark-list.scss',
 })
 export class BookmarkList {
-  @Input() title: string = 'Title';
+  @Input() bookmarkTitle: string = 'Title';
   @Input() bookmarks: [] = [];
 }
