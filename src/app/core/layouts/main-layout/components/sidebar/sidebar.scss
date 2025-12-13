@@ -9,7 +9,7 @@ aside {
 
   .header {
     width: 100%;
-    padding: map.get($spacing, 250) map.get($spacing, 250) map.get($spacing, 250) map.get($spacing, 125);
+    padding: map.get($spacing, 250) map.get($spacing, 250) map.get($spacing, 125) map.get($spacing, 250);
     margin-bottom: map.get($spacing, 200);
     display: flex;
     justify-content: flex-start;
