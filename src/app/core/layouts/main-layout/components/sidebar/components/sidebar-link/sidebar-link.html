@@ -4,6 +4,6 @@
   routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }"
 >
-  <img src="./images/{{icon}}.svg" [alt]="label">
+  <app-icon [icon]="icon" />
   <span>{{ label }}</span>
 </a>
