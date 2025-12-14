@@ -3,6 +3,7 @@ import {Button} from "@shared/components/button/button";
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {InputComponent} from "@shared/components/input/input";
 import {Router, RouterLink} from "@angular/router";
+import {Auth} from '@features/auth/services/auth';
 
 @Component({
   selector: 'app-reset-password',
@@ -17,7 +18,13 @@ import {Router, RouterLink} from "@angular/router";
   styleUrl: '../auth-style.scss',
 })
 export class ResetPassword {
-  private router = inject(Router);
+  private auth = inject(Auth);
+  protected email: string | null = null;
+
+  constructor() {
+    const navigation = history.state;
+    this.email = navigation?.email ?? null;
+  }
 
   protected resetPasswordForm: FormGroup = new FormGroup({
     password: new FormControl('', [Validators.required]),
@@ -25,6 +32,8 @@ export class ResetPassword {
   });
 
   protected onSubmit(): void {
-    this.router.navigateByUrl('/auth/login');
+    if (this.resetPasswordForm.invalid) return;
+
+    this.auth.resetPassword({ email: this.email, ...this.resetPasswordForm.value });
   }
 }

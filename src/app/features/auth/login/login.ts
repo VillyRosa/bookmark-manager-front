@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { InputComponent } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {Auth} from '@features/auth/services/auth';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
   styleUrl: '../auth-style.scss',
 })
 export class Login {
-  private router = inject(Router);
+  private auth = inject(Auth);
 
   protected loginForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -25,6 +26,8 @@ export class Login {
   });
 
   protected onSubmit(): void {
-    this.router.navigateByUrl('/');
+    if (this.loginForm.invalid) return;
+
+    this.auth.login(this.loginForm.value);
   }
 }

@@ -3,6 +3,7 @@ import {Button} from "@shared/components/button/button";
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {InputComponent} from "@shared/components/input/input";
 import {Router, RouterLink} from "@angular/router";
+import {Auth} from '@features/auth/services/auth';
 
 @Component({
   selector: 'app-forgot-password',
@@ -17,13 +18,15 @@ import {Router, RouterLink} from "@angular/router";
   styleUrl: '../auth-style.scss',
 })
 export class ForgotPassword {
-  private router = inject(Router);
+  private auth = inject(Auth);
 
-  protected resetPasswordForm: FormGroup = new FormGroup({
+  protected forgotPasswordForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email])
   });
 
   protected onSubmit(): void {
-    this.router.navigateByUrl('/auth/reset-password');
+    if (this.forgotPasswordForm.invalid) return;
+
+    this.auth.resetPasswordRequest(this.forgotPasswordForm.value.email);
   }
 }
